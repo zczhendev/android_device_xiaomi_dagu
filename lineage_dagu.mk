@@ -24,4 +24,4 @@ PRODUCT_MODEL := 23072122AC
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
-BUILD_FINGERPRINT := Xiaomi/elish/elish:13/RKQ1.211001.001/V816.0.2.0.TKYCNXM:user/release-keys
+BUILD_FINGERPRINT := Xiaomi/dagu_cn/missi:14/UKQ1.240624.001/OS2.0.10.0.ULZCNXM:user/release-keys

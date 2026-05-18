@@ -21,14 +21,9 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace('.*seclabel u:r:batterysecret:s0\n', ''),
     'vendor/lib/libaudioroute_ext.so': blob_fixup()
         .replace_needed('libaudioroute.so', 'libaudioroute-v34.so'),
-    # ----- Phase 2: 以下为 elish 特化 blob fixup, dagu 固件中模块名/SONAME 可能不同, 注释保留作参考 -----
-    # 'vendor/lib/hw/audio.primary.elish.so': blob_fixup()
-    #     .replace_needed('libaudioroute.so', 'libaudioroute-v34.so')
-    #     .binary_regex_replace(
-    #         b'/vendor/lib/liba2dpoffload.so',
-    #         b'liba2dpoffload_elish.so\x00\x00\x00\x00\x00\x00',
-    #     ),
-    # ----- end Phase 2 placeholder -----
+    'vendor/lib/hw/audio.primary.dagu.so': blob_fixup()
+        .replace_needed('libaudioroute.so', 'libaudioroute-v34.so')
+        .fix_soname(),
     'vendor/lib64/camera/components/com.mi.node.watermark.so': blob_fixup()
         .add_needed('libpiex_shim.so'),
     'vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so': blob_fixup()
