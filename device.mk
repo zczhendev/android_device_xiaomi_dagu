@@ -11,7 +11,7 @@ TARGET_IS_VAB := true
 TARGET_IS_TABLET := true
 
 # Inherit from sm8250-common
-$(call inherit-product, device/xiaomi/sm8250-common/kona.mk)
+$(call inherit-product, device/xiaomi/sm8250-common-tablet/kona.mk)
 
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
@@ -51,23 +51,23 @@ PRODUCT_PACKAGES += \
     MiPadParts
 
 PRODUCT_PACKAGES += \
-    vendor.xiaomi_elish.peripherals@1.0-service.default
+    vendor.xiaomi_dagu.peripherals@1.0-service.default
 
-$(call soong_config_set, xiaomi_elish_peripherals, stylus_use_old_driver, true)
+$(call soong_config_set, xiaomi_dagu_peripherals, stylus_use_old_driver, true)
 
 # Rootdir
 PRODUCT_PACKAGES += \
-    init.elish.rc
+    init.dagu.rc
 
 # RRO Overlays
 PRODUCT_PACKAGES += \
-    ApertureOverlayElish \
-    FrameworkResOverlayElish \
-    LineageSDKOverlayElish \
+    ApertureOverlayDagu \
+    FrameworkResOverlayDagu \
+    LineageSDKOverlayDagu \
     NetworkStackOverlayMIUI \
-    SettingsOverlayElish \
-    SettingsProviderOverlayElish \
-    SystemUIOverlayElish
+    SettingsOverlayDagu \
+    SettingsProviderOverlayDagu \
+    SystemUIOverlayDagu
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -85,4 +85,4 @@ PRODUCT_PACKAGES += \
     XiaomiTWS
 
 # Inherit from vendor blobs
-$(call inherit-product, vendor/xiaomi/elish/elish-vendor.mk)
+$(call inherit-product, vendor/xiaomi/dagu/dagu-vendor.mk)

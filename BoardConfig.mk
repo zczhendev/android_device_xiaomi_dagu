@@ -5,9 +5,9 @@
 #
 
 # Inherit from sm8250-common
-include device/xiaomi/sm8250-common/BoardConfigCommon.mk
+include device/xiaomi/sm8250-common-tablet/BoardConfigCommon.mk
 
-DEVICE_PATH := device/xiaomi/elish
+DEVICE_PATH := device/xiaomi/dagu
 
 # Board
 TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
@@ -16,10 +16,10 @@ TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
 TARGET_SCREEN_DENSITY := 360
 
 # Kernel
-TARGET_KERNEL_CONFIG += vendor/xiaomi/elish.config
+TARGET_KERNEL_CONFIG += vendor/xiaomi/dagu.config
 
 # OTA assert
-TARGET_OTA_ASSERT_DEVICE := elish
+TARGET_OTA_ASSERT_DEVICE := dagu
 
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
@@ -40,4 +40,4 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
 SOONG_CONFIG_XIAOMI_KONA_WIFI_SYMLINK_VERSION := v2
 
 # Inherit from the proprietary version
-include vendor/xiaomi/elish/BoardConfigVendor.mk
+include vendor/xiaomi/dagu/BoardConfigVendor.mk

@@ -1,6 +1,6 @@
 runtime_resource_overlay {
-    name: "SettingsOverlayElish",
-    theme: "SettingsOverlayElish",
+    name: "FrameworkResOverlayDagu",
+    theme: "FrameworkResOverlayDagu",
     certificate: "platform",
     sdk_version: "current",
     product_specific: true

@@ -4,8 +4,8 @@
 //
 
 runtime_resource_overlay {
-    name: "ApertureOverlayElish",
-    theme: "ApertureOverlayElish",
+    name: "ApertureOverlayDagu",
+    theme: "ApertureOverlayDagu",
     certificate: "platform",
     sdk_version: "current",
     product_specific: true

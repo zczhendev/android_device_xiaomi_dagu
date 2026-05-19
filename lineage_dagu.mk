@@ -13,14 +13,14 @@ $(call inherit-product, vendor/lineage/config/common_full_tablet_wifionly.mk)
 
 PRODUCT_CHARACTERISTICS := tablet
 
-# Inherit from elish device
-$(call inherit-product, device/xiaomi/elish/device.mk)
+# Inherit from dagu device
+$(call inherit-product, device/xiaomi/dagu/device.mk)
 
-PRODUCT_NAME := lineage_elish
-PRODUCT_DEVICE := elish
+PRODUCT_NAME := lineage_dagu
+PRODUCT_DEVICE := dagu
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := M2105K81AC
+PRODUCT_MODEL := 23072122AC
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
