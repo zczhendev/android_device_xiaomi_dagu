@@ -71,5 +71,10 @@ persist.vendor.fingerprint.powerfps_navigation_vendors=fpc
 # Torch
 ro.vendor.camera.legacy_torch_strength_config=0|/sys/class/leds/led:torch_0/max_brightness|150|150|10
 
+# Camera: dagu has no physical IMX563 ultrawide sensor
+# Aperture seeing camera device 2 (IMX563) causes black-and-white 0.9x mode
+# Remove Aperture from aux packagelist so it only uses main camera
+vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera
+
 # Wi-Fi
 ro.boot.wificountrycode=CN
