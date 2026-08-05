@@ -16,6 +16,10 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+    <!-- The Himax firmware reports touch major, width and pressure as binary 0/1 values, which
+         cannot distinguish a thumb from other contacts. -->
+    <bool name="config_oneStepTouchSizeSupported">false</bool>
+
 
     <!-- Flag indicating whether the we should enable the automatic brightness in Settings.
          Software implementation will be used if config_hardware_auto_brightness_available is not set -->
